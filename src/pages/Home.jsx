@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import MoviesCard from "../components/MoviesCard";
 import { searchMovies, getPopularMovies } from "../services/api";
+import SearchIcon from "../assets/magnifying-glass.png";
 
 import "../css/Home.css";
 
@@ -17,8 +18,6 @@ const Home = () => {
       setMovies(popularMovies);
       setError(null);
     } catch (err) {
-      console.log(err);
-      setError("Error fetching movies");
     } finally {
       setLoading(false);
     }
@@ -42,8 +41,6 @@ const Home = () => {
         setError(null);
       }
     } catch (err) {
-      console.log(err);
-      setError("Failed to search movies...");
     } finally {
       setLoading(false);
     }
@@ -61,6 +58,9 @@ const Home = () => {
         />
         <button type="submit" className="search-button">
           Search
+        </button>
+        <button type="submit" className="search-icon">
+          <img src={SearchIcon} alt={"Search"} height={30} />
         </button>
       </form>
 
