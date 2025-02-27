@@ -18,6 +18,8 @@ const Home = () => {
       setMovies(popularMovies);
       setError(null);
     } catch (err) {
+      console.log(err);
+      setError("Error fetching movies");
     } finally {
       setLoading(false);
     }
@@ -41,6 +43,8 @@ const Home = () => {
         setError(null);
       }
     } catch (err) {
+      console.log(err);
+      setError("Failed to search movies...");
     } finally {
       setLoading(false);
     }
@@ -64,10 +68,10 @@ const Home = () => {
         </button>
       </form>
 
-      {error && <div className="error-message">{error}</div>}
+      {error && <div className="error-message">! {error}</div>}
 
       {loading ? (
-        <h2 className="loading">Loading...</h2>
+        <h2 className="loading">Loading...🚀</h2>
       ) : (
         <div className="movies-grid">
           {movies.length > 0 ? (

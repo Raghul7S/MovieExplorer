@@ -68,6 +68,13 @@
   box-sizing: border-box;
 }
 
+.error-message {
+  font-size: 20px;
+  text-align: center;
+  color: red;
+  font-weight: 700;
+}
+
 @media (max-width: 639px) {
   .home {
     padding: 1rem 0;
@@ -101,6 +108,10 @@
 
   .no-results {
     font-size: 1rem;
-    margin-left: -4rem;
+    margin-left: -4.5rem;
+  }
+
+  .error-message {
+    font-size: 15px;
   }
 }
