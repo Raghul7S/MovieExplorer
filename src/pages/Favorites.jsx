@@ -14,7 +14,7 @@ const Favorites = () => {
         <h2>Your Favorites</h2>
         <div className="movies-grid">
           {favorites.map((movie) => (
-            <MoviesCard movie={movie} key={movie.id} />
+            <MoviesCard movie={movie} key={movie.id} isFavoritesScreen={true} />
           ))}
         </div>
       </div>

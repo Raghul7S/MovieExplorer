@@ -1,10 +1,10 @@
 const API_KEY = process.env.REACT_APP_API_KEY;
-console.log("API Key:", process.env.API_KEY);
 const BASE_URL = "https://api.themoviedb.org/3";
 
 export const getPopularMovies = async () => {
   const response = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}`);
   const data = await response.json();
+  console.log("Popular Movies API Response:", data);
   return data.results;
 };
 
