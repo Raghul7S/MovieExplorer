@@ -70,7 +70,7 @@ const MoviesCard = ({ movie, isFavoritesScreen }) => {
               </div>
               <div className="rating-cont">
                 <h4>⭐{movie.vote_average}</h4>
-                <h4>Reviews: {movie.vote_count}</h4>
+                <h4>📝{movie.vote_count}</h4>
               </div>
             </div>
             <p className="modal-overview">{movie.overview}</p>
